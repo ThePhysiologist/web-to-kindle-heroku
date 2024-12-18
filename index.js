@@ -14,7 +14,7 @@ express()
     const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
     await page.setViewport({ width: 600, height: 810 });
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(7000);
     await page.goto(process.env.SCREENSHOT_URL || 'https://darksky.net/details/40.7127,-74.0059/2021-1-6/us12/en');
     await page.screenshot({
       path: '/tmp/screenshot.png',
