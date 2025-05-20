@@ -17,10 +17,15 @@ express()
     await page.waitForNavigation({
   waitUntil: 'networkidle0',
 });
-    await page.goto(process.env.SCREENSHOT_URL || 'https://darksky.net/details/40.7127,-74.0059/2021-1-6/us12/en');
-    await page.screenshot({
-      path: '/tmp/screenshot.png',
-    });
+   await page.goto(process.env.SCREENSHOT_URL || 'https://darksky.net/details/40.7127,-74.0059/2021-1-6/us12/en');
+
+// Add a 15-second delay
+await new Promise(resolve => setTimeout(resolve, 15000));
+
+await page.screenshot({
+  path: '/tmp/screenshot.png',
+});
+
 
     await browser.close();
 
