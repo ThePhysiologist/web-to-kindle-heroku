@@ -6,6 +6,8 @@ const fs = require('fs');
 
 const PORT = process.env.PORT || 3000;
 
+  await new Promise(resolve => setTimeout(resolve, 15000));
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
