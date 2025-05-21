@@ -79,7 +79,7 @@ function convert(filename) {
 takeScreenshot();
 
 // Optionally re-run every X minutes
-setInterval(takeScreenshot, 30 * 60 * 1000); // every 30 minutes
+setInterval(takeScreenshot, 20 * 60 * 1000); // every 30 minutes
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
