@@ -43,7 +43,7 @@ await page.goto(SCREENSHOT_URL, {
 
 
     // 5 second wait after page load
-    await new Promise(resolve => setTimeout(resolve, 18000));
+    await new Promise(resolve => setTimeout(resolve, 25000));
 
     await page.screenshot({ path: SCREENSHOT_PATH });
     await browser.close();
