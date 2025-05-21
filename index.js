@@ -36,7 +36,7 @@ async function takeScreenshot() {
     });
     const page = await browser.newPage();
     await page.setViewport({ width: 600, height: 810 });
-    await page.goto(URL, {
+    await page.goto(SCREENSHOT_URL, {
   waitUntil: 'networkidle0',
   timeout: 60000 // wait up to 60 seconds
 });
